@@ -6,5 +6,5 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Hello Jenkins-Docker!");
         }
-    }asd;jasd;lkfja;dlskj
+    }
 }
