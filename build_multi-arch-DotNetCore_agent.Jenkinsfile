@@ -9,7 +9,7 @@ node('docker'){
 		docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-credentials'){
 	        sh 'docker buildx create --name buildxspace1'
 			sh 'docker buildx use buildxspace1'
-			sh 'docker buildx build -t zsoltdockerhub/multi_arch-agent-dnc:jenkinsfile --platform=linux/amd64,linux/arm/v7 - < dotnetcore_and_git.Dockerfile --push'
+			sh 'docker buildx build -t zsoltdockerhub/multi_arch-agent-dnc:jenkinsfile --platform=linux/amd64,linux/arm/v7 - < ./BuildX/dotnetcore_and_git.Dockerfile --push'
 		}
     }
 }
